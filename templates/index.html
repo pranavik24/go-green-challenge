@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Water Bottle Website</title>
+  <link href="../static/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+   <ul id="nav_bar">
+  <li><a class="nav_bar_button" href="/">Home</a></li>
+  <li><a class="nav_bar_button" href="/leaderboard">Leaderboard</a></li>
+</ul>
+
+     </div>
+    <form id="loginContainer" action="{{ url_for('login') }}" method="post">
+      <div id="loginForm" class="container">
+        {% if error %}
+            <p class=error><strong>Error:</strong> {{ error }}
+          {% endif %}
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit" id="loginBtn">Login</button>
+      <button type="submit" id="loginBtn" onclick="window.location.href = '/addsignup';"> Sign Up
+      </button>
+
+
+    </div>
+  </form>
+</div>
+
+  <div class="heading">
+  <h1 id="headingText">
+    Saving the World, One Plastic Water Bottle At A Time
+  </h1>
+    <button id="headingBtn" onclick="window.location.href = '/leaderboard';">
+      Check out the leaderboard!
+    </button>
+  </div>
+  <div class="mainIndex">
+  <div id="description" class="container">
+    <p>
+        In our current world, pollution has become rampant, with plastic pollution as one of the leading causes. Plastic is especially dangerous, because it is photodegradable, rather than biodegradable. This means that it can take thousands of years for just one plastic bottle to degrade, risking the future of our own planet. The solution: recycling! Here, we hope to encourage recycling through a friendly competition so that we can all better our planet, together. Come and join the fun!
+    </p>
+
+<script src="../static/script.js"></script>
+  </div>
+        </div>
+
+</body>
+
+</html>

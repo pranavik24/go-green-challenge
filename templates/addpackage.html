@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Water Bottle Package</title>
+      <link href="../static/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div class="change-container">
+    <h1 class="change-heading">
+        Add Water Bottle Package
+    </h1>
+<form class ="change-form" action="{{ url_for('add_package') }}" method="post">
+    <select name="packages" id="packages">
+        {% for row in rows %}
+            <option name="packageType" value="{{row["packageid"]}}">{{row["desc"]}}</option>
+         {% endfor %}
+    </select>
+    <label for="purchasedate"><b>Purchase Date (mm/dd/yyyy)</b></label>
+      <input type="text" placeholder="MM/DD/YYYY" name="purchasedate" required>
+    <button class="confirmBtn"  type="submit">Add Package</button>
+</form>
+    </div>
+
+</body>
+</html>

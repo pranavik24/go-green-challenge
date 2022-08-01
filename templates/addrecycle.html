@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Recycled Bottles</title>
+      <link href="../static/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div class="change-container">
+    <h1 class="change-heading">
+        Add Recycled Water Bottles
+    </h1>
+    <form class ="change-form" action="{{ url_for('add_recycles') }}" method="post">
+        <select name="recyclePacks" id="recyclePacks">
+        {% for row in rows %}
+            <option name="rpacks" value="{{row["storageid"]}}">{{row["desc"]}} purchased on {{row["purchase_date"]}}</option>
+         {% endfor %}
+    </select>
+        <label for="quantity">How many bottles did you recycle?: </label>
+        <input type="number" id="quantity" name="quantity" min="1" max="30">
+        <label for="currDate"><b>Today's Date (mm/dd/yyyy): </b></label>
+        <input type="text" placeholder="MM/DD/YYYY" name="currDate" required>
+        <button class="confirmBtn"  type="submit">Add Recycled Bottles</button>
+    </form>
+    </div>
+</body>
+</html>

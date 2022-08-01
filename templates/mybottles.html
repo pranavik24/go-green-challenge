@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Water Bottle Website</title>
+  <link href="../static/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+   <ul id="nav_bar">
+  <li><a class="nav_bar_button" href="/">Home</a></li>
+  <li><a class="nav_bar_button" href="/leaderboard">Leaderboard</a></li>
+  <li><a class="nav_bar_button" href="/mybottles">My Bottle Log</a></li>
+
+</ul>
+  <div id="bottleContainer">
+      <h1 id="bottleHeader">
+    My Bottle Log</h1>
+    <button id="leaderBtn" onclick="window.location.href = '/leaderboard';">
+      Go to Leaderboard
+    </button>
+  </div>
+
+
+  <div id="bottleInfo">
+     <table id="bottleTable">
+        <thead>
+            <td>Current Water Bottle Packages</td>
+            <td>Total Water Bottles in Consumption</td>
+            <td>Current Recycled Water Bottles</td>
+
+
+         </thead>
+        {% for row in data %}
+            <tr>
+               <td>{{row["desc"]}}</td>
+                <td>{{row["bottles_count"]}}</td>
+                <td>{{row["bottles_recycled"]}}</td>
+            </tr>
+         {% endfor %}
+        </table>
+  <div id="bottleBtnContainer">
+    <button class="bottleBtn" onclick="window.location.href = '/addpackagepage';">
+        Add Water Bottle Package
+    </button>
+
+    <button class="bottleBtn" onclick="window.location.href = '/addrecyclepage';">
+        Add Recycled Water Bottles
+    </button>
+    <button class="bottleBtn" onclick="window.location.href = '/addmarkasfinpage';">
+        Mark as Finished
+    </button>
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

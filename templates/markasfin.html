@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mark as Finished</title>
+
+</head>
+<body>
+  <link href="../static/style.css" rel="stylesheet" type="text/css" />
+    <div class="change-container">
+    <h1 class="change-heading">
+        Mark as finished
+    </h1>
+     <form class ="change-form" action="{{ url_for('add_markasfin') }}" method="post">
+        <select name="deletePacks" id="deletePacks">
+        {% for row in rows %}
+            <option name="delpacks" value="{{row["storageid"]}}">{{row["desc"]}} purchased on {{row["purchase_date"]}} </option>
+         {% endfor %}
+    </select>
+        <button class="confirmBtn" type="submit">Confirm</button>
+    </form>
+    </div>
+
+</body>
+</html>
