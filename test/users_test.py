@@ -1,5 +1,6 @@
 import sqlite3
-
+# change the database location if setting up in a new machine.
+# Needs to be moved to a properties file
 con = sqlite3.connect('/Users/rajithak/PycharmProjects/flashWaterBottleProj/database/waterbottleproj.db')
 print ("Opened database successfully");
 
