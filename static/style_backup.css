@@ -1,0 +1,155 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  border: 0%;
+  background-color:#C7F9CC ;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.mainIndex{
+  display: grid;
+  grid-template-columns: 70% 30%;
+
+}
+.heading{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  background-image: url("plastic-bottles-on-blue.jpg");
+  background-color: rgb(0,152,216);
+  text-align: center;
+  text-decoration: bold;
+}
+#headingText{
+  margin:0%;
+  font-size: 5em;
+}
+#headingBtn{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #49A078;
+  color:black;
+  font-size:25px;
+  border-radius: 12px;
+  border: #49A078;
+}
+#headingBtn:hover{
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.leaderboard{
+  display: grid;
+}
+#nav_bar{
+  background-color:#216869;
+  list-style-type: none;
+  overflow: hidden;
+  text-decoration: none;
+  border: 0%;
+  margin: 0%;
+
+}
+li {
+  float: right;
+}
+.nav_bar_button {
+  display: inline-block;
+  font-size: 25px;
+  background-color: #216869;
+  color:  white;
+  text-decoration: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+.nav_bar_button:hover {
+  background-color: #49A078;
+  color: white;
+}
+
+.container{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#loginForm{
+  background-color: #E9E9E9;
+  width: 275px;
+
+}
+#refreshBtn{
+  background-color: #75b899;
+  color:black;
+  font-size:25px;
+  border-radius: 12px;
+  border: #75b899;
+  height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+#refreshBtn:hover{
+  background-color: #5f9b7f;
+  border: #5f9b7f;
+
+}
+#leaderboard-header{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+#leaderText{
+  text-align: center;
+}
+#leaderboard{
+  background-color:#fafffa ;
+  font-size:20px;
+  margin: auto;
+  width: 95%;
+  border-color: #216869;
+  border: 3px solid #216869;
+}
+thead{
+  background-color:#216869 ;
+  border: 1px solid #216869;
+  color: #fafffa;
+}
+ th, td {
+  border: 1px solid #216869;
+  height: 30px;
+}
+
+button{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input[type=text], input[type=password] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#submitBtnContainer{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 275px;
+
+}
+#submitBtn{
+  width: 100px;
+}
+form{
+  padding: 10px;
+}
+
