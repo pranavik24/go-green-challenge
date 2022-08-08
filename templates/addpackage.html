@@ -17,7 +17,7 @@
             <option name="packageType" value="{{row["packageid"]}}">{{row["desc"]}}</option>
          {% endfor %}
     </select>
-    <label for="purchasedate"><b>Purchase Date (mm/dd/yyyy)</b></label>
+    <label id="purchasedate" for="purchasedate"><b>Purchase Date (mm/dd/yyyy)</b></label>
       <input type="text" placeholder="MM/DD/YYYY" name="purchasedate" required>
     <button class="confirmBtn"  type="submit">Add Package</button>
 </form>
