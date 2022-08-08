@@ -17,9 +17,9 @@
             <option name="rpacks" value="{{row["storageid"]}}">{{row["desc"]}} purchased on {{row["purchase_date"]}}</option>
          {% endfor %}
     </select>
-        <label for="quantity">How many bottles did you recycle?: </label>
+        <label id="purchasedate" for="quantity">How many bottles did you recycle?: </label>
         <input type="number" id="quantity" name="quantity" min="1" max="30">
-        <label for="currDate"><b>Today's Date (mm/dd/yyyy): </b></label>
+        <label id="purchasedate" for="currDate"><b>Today's Date (mm/dd/yyyy): </b></label>
         <input type="text" placeholder="MM/DD/YYYY" name="currDate" required>
         <button class="confirmBtn"  type="submit">Add Recycled Bottles</button>
     </form>
