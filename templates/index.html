@@ -9,32 +9,38 @@
 </head>
 
 <body>
-
+{% if error %}
+            <p class=error><strong>Error:</strong> {{ error }} - Please try again </p>
+{% endif %}
    <ul id="nav_bar">
   <li><a class="nav_bar_button" href="/">Home</a></li>
   <li><a class="nav_bar_button" href="/leaderboard">Leaderboard</a></li>
+  <li><a class="nav_bar_button" onclick="document.getElementById('id01').style.display='block'">Login</a></li>
+
 </ul>
+<div id="id01" class="modal">
 
-     </div>
-    <form id="loginContainer" action="{{ url_for('login') }}" method="post">
+    <form class= "modal-content animate" id="loginContainer" action="{{ url_for('login') }}" method="post">
       <div id="loginForm" class="container">
-        {% if error %}
-            <p class=error><strong>Error:</strong> {{ error }}
-          {% endif %}
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <p class = "loginText"> Sign in to Go Green! Challenge </p>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label class= "loginItem" for="uname"><b>Username: </b></label>
+      <input class= "loginItem" type="text" placeholder="Enter Username" name="uname" required>
 
-      <button type="submit" id="loginBtn">Login</button>
-      <button type="submit" id="loginBtn" onclick="window.location.href = '/addsignup';"> Sign Up
+      <label class= "loginItem" for="psw"><b>Password: </b></label>
+      <input class= "loginItem" type="password" placeholder="Enter Password" name="psw" required>
+
+      <button class= "loginItem" type="submit" id="loginBtn">Login</button>
+
+      <p class = "loginText"> New to Go Green! Challenge? </p>
+      <button class= "loginItem"type="submit" id="signUpBtn" onclick="window.location.href = '/addsignup';"> Sign Up
       </button>
-
 
     </div>
   </form>
 </div>
+
 
   <div class="heading">
   <h1 id="headingText">
@@ -45,10 +51,24 @@
     </button>
   </div>
   <div class="mainIndex">
-  <div id="description" class="container">
-    <p>
-        In our current world, pollution has become rampant, with plastic pollution as one of the leading causes. Plastic is especially dangerous, because it is photodegradable, rather than biodegradable. This means that it can take thousands of years for just one plastic bottle to degrade, risking the future of our own planet. The solution: recycling! Here, we hope to encourage recycling through a friendly competition so that we can all better our planet, together. Come and join the fun!
-    </p>
+  <div id="description" class="textContainer">
+      <h1 id="nameHead"> Go Green! Challenge </h1>
+      <h2 class="descHead"> Problems from Plastic </h2>
+        <p class="descText">
+            In our current world, pollution has become rampant, with plastic pollution as one of the leading causes. Plastic is especially dangerous, because it is photodegradable, rather than biodegradable. This means that it can take thousands of years for just one plastic bottle to degrade. In addition, due to improper disposal of trash, such as littering, a lot of plastic enters our forests and oceans, destroying environments and killing animals.
+        </p>
+      <h2 class="descHead"> Why Recycling Matters </h2>
+        <p class="descText">
+            Rather than allowing one plastic bottle to have a single lifetime as a bottle, recycling allows the bottle to be repurposed, and then reused for future water bottles. This leads to less production of plastic, and reduces the amount of plastic waste.
+        </p>
+      <h2 class="descHead"> Our Initiative </h2>
+        <p class="descText">
+            Only 8% of plastics are recycled in the United States, of the 37.5 millions tons of plastics produced each year.
+            Here at Go Green!, we want to motivate people to increase the amount of plastic water
+            bottles they recycle through a friendly competition, vying for the top spot of the greatest water bottles recycled.
+            And in the process, we can all help the planet, one bottle at a time! Why don't you join the fun!!
+        </p>
+      <button class= "loginItem"type="submit" id="signUpBtn" onclick="window.location.href = '/addsignup';"> Join Go Green! </button>
 
 <script src="../static/script.js"></script>
   </div>
@@ -57,3 +77,4 @@
 </body>
 
 </html>
+
