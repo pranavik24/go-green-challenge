@@ -1,5 +1,5 @@
 # Go Green! Challenge
-Backyard Hacks 2022 Hackathon
+Neo Hacks 2.0 2022 Hackathon
 
 ## Inspiration
 I was inspired by current efforts to encourage environmentally friendly habits, like recycling and cutting down on fuel consumption. But, I wanted to create a motivational way to do this! And what better way than encouraging a competition?
